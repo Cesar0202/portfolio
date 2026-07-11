@@ -1,6 +1,6 @@
 # Portfolio Personal
 
-Este es el repositorio de mi portafolio personal web, disenado para presentar mis proyectos de desarrollo de software, analisis de datos y automatizacion.
+Este es el repositorio de mi portafolio personal web, disenado para presentar mis proyectos de desarrollo de software, ciencia de datos y automatizacion.
 
 ## Tecnologias Utilizadas
 
@@ -29,4 +29,4 @@ El portafolio ha sido construido utilizando tecnologías web estándar y prácti
 ## Contacto
 
 Cesar Huaman Uriarte
-Desarrollo Web y Movil | Analisis de Datos | Automatizacion de Procesos
+Desarrollo Web y Movil | ciencia de datos | Automatizacion de Procesos
