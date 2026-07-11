@@ -1,0 +1,473 @@
+.carrousel {
+  width: 95%;
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.carrousel::-webkit-scrollbar {
+  display: none;
+}
+
+.skills { 
+  grid-area: 1 / 5 / 4 / 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 24px 25px;
+  animation: spin 25s linear infinite;
+  padding-right: 20px;
+}
+
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  text-align: center;
+} 
+
+.skills-icon {
+  width: 42px;
+  height: 42px;
+}
+
+.skills-name {
+  font-size: 0.7em;
+  color: #fff;
+}
+
+.projects { 
+  grid-area: 4 / 5 / 9 / 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-projects {
+  width: 100%;
+}
+
+.projects-slider-wrapped {
+  width: 85%;
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+  
+}
+
+/* Degradado oscuro para que el texto sea perfectamente legible (en la cara frontal) */
+.project-card-front::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 15%, rgba(0, 0, 0, 0.55) 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 0.5rem;
+}
+
+.projects-slider {
+  display: flex;
+  aspect-ratio: 17 / 12;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+/* EFECTO VOLTEADO 3D (FLIP CARD) */
+.project-slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+  perspective: 1000px;
+  overflow: visible !important;
+}
+
+.project-card-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 0.5rem;
+}
+
+/* Al pasar el mouse, gira la tarjeta */
+.project-slide:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras de la tarjeta */
+.project-card-front, 
+.project-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Cara Frontal */
+.project-card-front {
+  transform: rotateY(0deg) translateZ(1px);
+  z-index: 2;
+}
+
+.project-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cara Trasera */
+.project-card-back {
+  background: linear-gradient(135deg, #0f2035 0%, #07101b 100%);
+  color: white;
+  transform: rotateY(180deg) translateZ(1px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 1.5px solid rgba(216, 157, 80, 0.25);
+  z-index: 1;
+}
+
+/* Títulos y textos de las caras */
+.project-info {
+  position: absolute;
+  bottom: 45px;
+  left: 15px;
+  right: 15px;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.project-title {
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.1 !important;
+}
+
+.project-desc {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.72rem !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  line-height: 1.25 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.project-back-title {
+  color: #D89D50;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-back-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  margin: 0 0 15px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Enlaces traseros */
+.project-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-link {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.github-link:hover {
+  background-color: #ffffff;
+  color: #0c192a;
+}
+
+.github-link:hover .link-icon {
+  filter: none !important;
+}
+
+.demo-link {
+  background-color: #D89D50;
+  color: #0c192a;
+  border-color: #D89D50;
+}
+
+.demo-link:hover {
+  background-color: #ffffff;
+  color: #0c192a;
+  border-color: #ffffff;
+}
+
+.link-icon {
+  width: 14px;
+  height: 14px;
+  transition: all 0.3s ease;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+} 
+
+.slider-nav a {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.projects-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.resume { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: 4 / 10 / 5 / 12;
+  background: transparent;
+  border: none;
+  color: #D89D50;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.resume:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-shadow: 0 0 10px rgba(216, 157, 80, 0.6);
+}
+
+.download-cv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.download-cv img {
+  /* Filtro CSS para convertir el icono negro a dorado (#D89D50) */
+  filter: invert(66%) sepia(21%) saturate(1210%) hue-rotate(349deg) brightness(91%) contrast(90%);
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+}
+.experience { 
+  grid-area: 5 / 10 / 8 / 13; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* La línea que conecta los puntos, se adapta automáticamente a la altura */
+.timeline-item {
+  font-size: 0.8rem;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  text-align: left;
+  transition: all 0.5s ease;
+  padding-left: 35px;
+  padding-bottom: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: rgba(216, 157, 80, 0.5);
+  top: 8px;
+  bottom: -20px;
+  left: 19px;
+  z-index: 1;
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+/* El punto de la línea */
+.timeline-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #0c192a;
+  border: 2px solid #D89D50;
+  left: 14px;
+  top: 2px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* --- ESTADOS EN REPOSO --- */
+.timeline-details {
+  display: none;
+}
+
+.timeline-date {
+  font-size: 0.6rem;
+  color: #D89D50;
+  padding: 0;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  padding: 0;
+}
+
+.timeline-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0;
+}
+
+.experience.expanded .timeline-item {
+  margin-bottom: 20px;
+}
+
+/* Ajuste de la línea cuando se expande */
+.experience.expanded .timeline-item::before {
+  bottom: -25px;
+}
+
+.experience.expanded .timeline-title {
+  font-size: 1.5rem;
+  color: #D89D50;
+  font-weight: 600;
+}
+
+.experience.expanded .timeline-subtitle {
+  padding-bottom: 0;
+}
+
+.experience.expanded .timeline-details {
+  display: block;
+  list-style: none;
+  margin-top: 10px;
+  color: #e0e0e0;
+  padding: 0 10px 0 15px;
+}
+
+.experience.expanded .timeline-details li {
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: justify;
+  margin-bottom: 5px;
+  padding: 0 55px 0 15px ;
+  position: relative;
+}
+
+.experience.expanded .timeline-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #D89D50;
+}  

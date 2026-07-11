@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Cesar Huaman Uriarte</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Content -->
+    <div class="content">
+      <div class="presentation">
+        <p class="greeting">Hola!</p>
+        <h1 class="name">Soy Cesar</h1>
+        <div class="role">
+          <p class="role-item">Desarrollo Web y Móvil</p>
+          <p class="role-item">Análisis de Datos</p>
+          <p class="role-item">Automatización de Procesos</p>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="./images/profile/profile.png" class="profile-img" alt="Profile Picture">
+      </div>
+      <div class="skills content-item">
+        <button class="card-toggle-btn" aria-label="Expandir">
+          <svg class="icon-expand" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <p class="section-title">Habilidades</p>
+        <div class="carrousel">
+          <div class="skills-content"></div>
+          <div aria-hidden="true" class="skills-content"></div>
+          <div aria-hidden="true" class="skills-content"></div>
+        </div>
+        <div class="skills-expanded-content" style="display: none;"></div>
+      </div>
+      <div class="projects content-item">
+        <button class="card-toggle-btn" aria-label="Expandir">
+          <svg class="icon-expand" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <p class="section-title">Proyectos</p>
+        <div class="projects-projects">
+          <div class="projects-slider-wrapped">
+            <div class="projects-slider">
+              <!-- Slide 1 -->
+              <div class="project-slide" id="slider-1">
+                <div class="project-card-inner">
+                  <div class="project-card-front">
+                    <img src="./images/projects/gitinsight.png" alt="GitInsight Analyzer">
+                    <div class="project-info">
+                      <h4 class="project-title">GitInsight Analyzer</h4>
+                      <p class="project-desc">Analizador técnico de perfiles GitHub y GitLab en segundos.</p>
+                    </div>
+                  </div>
+                  <div class="project-card-back">
+                    <h4 class="project-back-title">GitInsight Analyzer</h4>
+                    <p class="project-back-desc">Herramienta web para analizar métricas y repositorios de perfiles en GitHub y GitLab rápidamente.</p>
+                    <div class="project-links">
+                      <a href="https://github.com/Cesar0202/gitinsight_analyzer" target="_blank" rel="noopener noreferrer" class="project-link-btn github-link">
+                        <img src="./images/social/github.svg" alt="GitHub" class="link-icon" style="filter: brightness(0) invert(1);">
+                        <span>GitHub</span>
+                      </a>
+                      <a href="https://gitinsight-analyzer.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <span>Ver Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="project-slide" id="slider-2">
+                <div class="project-card-inner">
+                  <div class="project-card-front">
+                    <img src="./images/projects/tesis.png" alt="Proyecto de Tesis">
+                    <div class="project-info">
+                      <h4 class="project-title">Sistema de Aprendizaje Adaptativo</h4>
+                      <p class="project-desc">Plataforma educativa con IA que personaliza el contenido y ritmo de enseñanza.</p>
+                    </div>
+                  </div>
+                  <div class="project-card-back">
+                    <h4 class="project-back-title">App de Aprendizaje (Tesis)</h4>
+                    <p class="project-back-desc">Desarrollada en Flutter con FastAPI. Integra scikit-learn, XGBoost y LLMs para adaptar el aprendizaje de cada estudiante.</p>
+                    <div class="project-links">
+                      <a href="https://kognitia-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo-link" style="width: 100%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <span>Ver Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="project-slide" id="slider-3">
+                <div class="project-card-inner">
+                  <div class="project-card-front">
+                    <img src="./images/projects/tabledata.png" alt="TableData Extractor">
+                    <div class="project-info">
+                      <h4 class="project-title">TableData Extractor</h4>
+                      <p class="project-desc">Herramienta web para la extracción inteligente de datos tabulares.</p>
+                    </div>
+                  </div>
+                  <div class="project-card-back">
+                    <h4 class="project-back-title">TableData Extractor</h4>
+                    <p class="project-back-desc">Automatización y procesamiento de tablas. Permite exportar de forma rápida y limpia datos hacia Excel o CSV.</p>
+                    <div class="project-links">
+                      <a href="https://github.com/Cesar0202/tabledata-extractor" target="_blank" rel="noopener noreferrer" class="project-link-btn github-link">
+                        <img src="./images/social/github.svg" alt="GitHub" class="link-icon" style="filter: brightness(0) invert(1);">
+                        <span>GitHub</span>
+                      </a>
+                      <a href="https://tabledata-extractor-landing-ba6cvj3a7-cesar-huriarte-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <span>Ver Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="project-slide" id="slider-4">
+                <div class="project-card-inner">
+                  <div class="project-card-front">
+                    <img src="./images/projects/SGRH.png" alt="Sistema de Gestión RRHH">
+                    <div class="project-info">
+                      <h4 class="project-title">Sistema de Gestión RRHH</h4>
+                      <p class="project-desc">Plataforma HRMS para administrar empleados, asistencia y organizar documentos.</p>
+                    </div>
+                  </div>
+                  <div class="project-card-back">
+                    <h4 class="project-back-title">HRMS Full-Stack</h4>
+                    <p class="project-back-desc">Construido con React 19, Supabase y Recharts. Entorno de despliegue contenerizado con Docker y Nginx.</p>
+                    <div class="project-links">
+                      <a href="http://201.234.116.79:18080/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo-link" style="width: 100%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <span>Ver Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="project-slide" id="slider-5">
+                <div class="project-card-inner">
+                  <div class="project-card-front">
+                    <img src="./images/projects/neuroplay.png" alt="NeuroPlay">
+                    <div class="project-info">
+                      <h4 class="project-title">NeuroPlay</h4>
+                      <p class="project-desc">Plataforma web de entrenamiento cognitivo con 28 minijuegos interactivos.</p>
+                    </div>
+                  </div>
+                  <div class="project-card-back">
+                    <h4 class="project-back-title">NeuroPlay</h4>
+                    <p class="project-back-desc">SPA interactiva construida con React 18, TypeScript, Tailwind CSS y Framer Motion con persistencia de datos local.</p>
+                    <div class="project-links">
+                      <a href="https://github.com/Cesar0202/neuroplay" target="_blank" rel="noopener noreferrer" class="project-link-btn github-link">
+                        <img src="./images/social/github.svg" alt="GitHub" class="link-icon" style="filter: brightness(0) invert(1);">
+                        <span>GitHub</span>
+                      </a>
+                      <a href="https://neuroplay-pearl.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <span>Ver Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-nav">
+              <a href="#slider-1"></a>
+              <a href="#slider-2"></a>
+              <a href="#slider-3"></a>
+              <a href="#slider-4"></a>
+              <a href="#slider-5"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="resume content-item">
+        <a href="./cv.pdf" target="_blank" rel="noopener noreferrer" class="download-cv">
+          <p class="resume-title">Currículum</p>
+          <img src="./images/icons/download.svg" alt="Descargar CV">
+        </a>
+      </div>
+      <div class="social content-item">
+        <a href="mailto:alce02100@gmail.com" target="_blank" rel="noopener noreferrer" class="social-link"><img src="./images/social/gmail.svg" alt="Gmail" class="social-item"></a>
+        <a href="https://www.linkedin.com/in/cesar-huriarte/" target="_blank" rel="noopener noreferrer" class="social-link"><img src="./images/social/linkedin.svg" alt="LinkedIn" class="social-item"></a>
+        <a href="https://github.com/Cesar0202" target="_blank" rel="noopener noreferrer" class="social-link"><img src="./images/social/github.svg" alt="GitHub" class="social-item"></a>
+        <a href="https://gitlab.com/alce02100" target="_blank" rel="noopener noreferrer" class="social-link"><img src="./images/social/gitlab.svg" alt="GitLab" class="social-item"></a>
+      </div>
+      <div class="experience content-item">
+        <button class="card-toggle-btn" aria-label="Expandir">
+          <svg class="icon-expand" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <p class="section-title">Experiencia</p>
+        <div class="experience-content">
+          <div class="timeline-container">
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Marzo 2024 - marzo 2026</div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Desarrollador Web y móvil</h3>
+                <p class="timeline-subtitle">IPTV Perú SAC</p>
+                <ul class="timeline-details">
+                  <li>Desarrollo Full-Cycle: Lideré el desarrollo full-cycle de un Sistema de RRHH cubriendo desde el levantamiento de requerimientos hasta el despliegue en producción, garantizando estabilidad y continuidad operativa del área.</li>
+                  <li>Automatización e IA: Automaticé la gestión del área administrativa mediante agentes y flujos de trabajo asistidos por IA, reduciendo procesos que tomaban horas a un tiempo de ejecución de minutos.</li>
+                  <li>Aseguramiento de Calidad: Implementé pruebas automatizadas con Selenium para validar flujos críticos del Sistema de RRHH, reduciendo la incidencia de errores en producción.</li>
+                  <li>Despliegue Multiplataforma: Gestioné lanzamientos y cumplimiento normativo de aplicaciones en Google Play y plataformas Smart TV (Samsung , LG y Fire TV).</li>
+                  <li>Mantenimiento Evolutivo: Aseguré la alta disponibilidad y actualización constante de aplicaciones Web, Móviles y Smart TV, minimizando tiempos de inactividad.</li>
+                  <li>Soporte y Comunicación: Brindé soporte técnico a clientes y coordiné con áreas internas para el levantamiento y resolución de incidencias.</li>
+                </ul>
+              </div>
+            </div>           
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Sept 2021 - Feb 2022</div>
+              <div class="timeline-content">
+                <h3 class="timeline-title">Analista de Datos </h3>
+                <p class="timeline-subtitle">Agroindustrial Beta SAC</p>
+                <ul class="timeline-details">
+                  <li>Gestioné la recopilación y estructuración de datos de pruebas de calidad.</li>
+                  <li>Identifiqué tendencias negativas en los procesos de control mediante análisis estadístico, facilitandola implementación de acciones correctivas.</li>
+                  <li>Colaboré en la calibración y mantenimiento preventivo de equipos de medición.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

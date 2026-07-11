@@ -1,0 +1,29 @@
+# Dependencias
+node_modules/
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Carpetas de Editores/IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos empaquetados o temporales
+*.zip
+*.tar.gz
+*.rar
+tmp/
+temp/
